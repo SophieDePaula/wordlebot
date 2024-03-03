@@ -76,7 +76,7 @@ function Board() {
             buttonStyle={{marginLeft: '2rem'}} 
             onClick={handleGuessWord}
             waitForGuess={waitForGuess || congratsAlert !== "" || showAlert}
-            text={waitForGuess ? `Guessing...` :`Guess word`}
+            text={waitForGuess ? `Guessing...` :`Guess Word`}
             />  
             <GameButton
             buttonStyle={{marginLeft: 'auto', marginRight: '2rem'}} 

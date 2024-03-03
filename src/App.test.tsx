@@ -10,7 +10,7 @@ jest.mock('./hooks/useFetchWord', () => ({
 describe('Board', () => {
  test('renders without crashing', () => {
     const { getByText } = render(<Board />);
-    expect(getByText('Guess word')).toBeInTheDocument();
+    expect(getByText('Guess Word')).toBeInTheDocument();
     expect(getByText('Reset Game')).toBeInTheDocument();
   });
 
@@ -18,12 +18,12 @@ describe('Board', () => {
     const { getByText } = render(<Board />);
     const resetButton = getByText('Reset Game');
     fireEvent.click(resetButton);
-    expect(getByText('Guess word')).toBeInTheDocument();
+    expect(getByText('Guess Word')).toBeInTheDocument();
   });
 
-  test('render guess word', () => {
+  test('render guess Word', () => {
     const { getByText, container } = render(<Board />);
-    const guessButton = getByText('Guess word')
+    const guessButton = getByText('Guess Word')
     fireEvent.click(guessButton)
     const guess = container.querySelector('#guess')
     expect(guess).toBeInTheDocument()
