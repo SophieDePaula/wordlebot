@@ -1,0 +1,21 @@
+.char-box {
+    border: 1px solid black; 
+    padding: 10px; 
+    margin: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: x-large;
+    
+  }
+
+  .button-main {
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 3rem;
+    padding: 1rem
+  }
+
+  .alert {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
