@@ -21,7 +21,9 @@ const useFetchWord = ({words, endpoint}: PropsType): OutputType =>  {
 
 
   useEffect(() => {
-
+    if (error) {
+      setError("")
+    }
     const fetchNewWord = async () => {
       try {
         const response = await fetch(endpoint, {
@@ -41,6 +43,7 @@ const useFetchWord = ({words, endpoint}: PropsType): OutputType =>  {
         } else {
             setError(String(error))
         }
+        setFetchWord({guess: ''})
 
       }
     };

@@ -29,11 +29,13 @@ function Board() {
     const { fetchWord, error } = useFetchWord({endpoint: ENDPOINT, words});
     
     useEffect(() => {
-        if (fetchWord) {
-            setWaitForGuess(false);
-            setCurrGuess(fetchWord.guess.toUpperCase());
-        }
-    }, [fetchWord]);
+        if(error) {
+            setShowAlert(true)
+        } 
+        
+        setCurrGuess(fetchWord.guess.toUpperCase());
+        setWaitForGuess(false);
+    }, [fetchWord, error]);
 
     const handleGuessWord = async () => {
         setWaitForGuess(true)
